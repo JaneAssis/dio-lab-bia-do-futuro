@@ -6,13 +6,9 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 
 | Arquivo | Formato | Utilização no Agente |
 |---------|---------|---------------------|
-| `historico_atendimento.csv` | CSV | Contextualizar interações anteriores |
-| `perfil_investidor.json` | JSON | Personalizar recomendações |
-| `produtos_financeiros.json` | JSON | Sugerir produtos adequados ao perfil |
-| `transacoes.csv` | CSV | Analisar padrão de gastos do cliente |
-
-> [!TIP]
-> **Quer um dataset mais robusto?** Você pode utilizar datasets públicos do [Hugging Face](https://huggingface.co/datasets) relacionados a finanças, desde que sejam adequados ao contexto do desafio.
+| `estilos_moda.json` | JSON | Consulta 5 estilos disponíveis na base. |
+| `guia_medicao.json` | JSON | Possui as instruções de como o usuário pode descobrir o tipo de corpo através das medidas. |
+| `recomendacoes_corpo.json` | JSON | Informa as peças boas/ruins de acordo com o formato corporal do usuário. |
 
 ---
 
@@ -20,7 +16,7 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 
 > Você modificou ou expandiu os dados mockados? Descreva aqui.
 
-[Sua descrição aqui]
+Como esse assistente virtual é focado em moda, todos os dados mockados foram substituídos. 
 
 ---
 
