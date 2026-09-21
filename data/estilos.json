@@ -1,0 +1,27 @@
+[
+  {
+    "nome_estilo": "Casual (Clean Girl / Clean Boy)",
+    "descricao": "Visual minimalista, básico e alinhado. Peças neutras, caimento impecável e aparência leve.",
+    "pecas_chave": ["Camisetas básicas de algodão pesado", "Tênis branco minimalista", "Jeans reto neutro", "Regatas lisas", "Blazers leves"]
+  },
+  {
+    "nome_estilo": "Elegante",
+    "descricao": "Sofisticado e atemporal. Foco em tecidos de alta qualidade e caimentos alinhados.",
+    "pecas_chave": ["Calças de alfaiataria", "Camisas de botão em linho ou tricoline", "Mocassins/Scarpins", "Cintos finos de couro", "Vestidos de corte reto/envelope"]
+  },
+  {
+    "nome_estilo": "Corporativo / Formal",
+    "descricao": "Profissional, sério e elegante para ambientes de trabalho e reuniões.",
+    "pecas_chave": ["Ternos e blazers estruturados", "Calças sociais/alfaiataria", "Camisas sociais engomadas", "Sapatos de couro ou salto bloco"]
+  },
+  {
+    "nome_estilo": "Streetwear",
+    "descricao": "Urbano, moderno e confortável, influenciado pela cultura das ruas, skate e esportes.",
+    "pecas_chave": ["Camisetas oversize", "Calças cargo ou wide leg", "Tênis esportivos/sneakers em destaque", "Moletom pesado", "Acessórios como bonés e correntes"]
+  },
+  {
+    "nome_estilo": "Dark (Emo / Gótico)",
+    "descricao": "Expressivo, alternativo e predominantemente em tons escuros ou pretos.",
+    "pecas_chave": ["Jaquetas de couro preto", "Coturnos e botas pesadas", "Calças/saias pretas com correntes ou ilhós", "Roupas com sobreposição e texturas de renda/couro"]
+  }
+]
