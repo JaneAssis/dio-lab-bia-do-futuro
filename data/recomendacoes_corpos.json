@@ -1,0 +1,32 @@
+[
+  {
+    "tipo_corpo": "Triângulo Invertido",
+    "foco": "Trazer volume e atenção para a parte de baixo do corpo para equilibrar com os ombros.",
+    "sugestoes": ["Calças pantalona, cargo ou wide leg", "Saias evasê", "Decote V para alongar o tronco"],
+    "evitar": ["Ombreiras muito exageradas", "Blusas com babados excessivos nos ombros"]
+  },
+  {
+    "tipo_corpo": "Ampulheta",
+    "foco": "Valorizar a cintura natural sem criar volumes desproporcionais.",
+    "sugestoes": ["Vestidos e blusas envelope", "Cintos na cintura", "Calças de cintura alta"],
+    "evitar": ["Roupas excessivamente saco ou sem nenhuma estrutura no meio do corpo"]
+  },
+  {
+    "tipo_corpo": "Retângulo",
+    "foco": "Criar ilusão de curvas ou aproveitar o caimento reto de forma moderna.",
+    "sugestoes": ["Cortes assimétricos", "Cintos contrastantes", "Sobreposições e jaquetas acinturadas"],
+    "evitar": ["Cortes muito retos sem nenhum detalhe visual"]
+  },
+  {
+    "tipo_corpo": "Triângulo",
+    "foco": "Trazer volume e atenção para a parte de cima do tronco para equilibrar com o quadril mais largo.",
+    "sugestoes": ["Blusas com babados ou estampas", "Decote canoa ou ciganinha", "Jaquetas estruturadas", "Calças e saias de corte reto em cores escuras"],
+    "evitar": ["Calças com muitos bolsos laterais (cargo)", "Estampas chamativas na parte de baixo"]
+  },
+  {
+    "tipo_corpo": "Oval",
+    "foco": "Alongar a silhueta, criar linhas verticais e trazer estrutura sem apertar a região central do corpo.",
+    "sugestoes": ["Decote V ou U profundo", "Terceira peça aberta (blazers, cardigans compridos)", "Look monocromático", "Tecidos encorpados de caimento fluido"],
+    "evitar": ["Cintos muito apertados na cintura", "Roupas excessivamente coladas ou extremamente largas"]
+  }
+]
