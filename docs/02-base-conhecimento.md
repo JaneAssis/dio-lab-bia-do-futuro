@@ -17,6 +17,8 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 > Você modificou ou expandiu os dados mockados? Descreva aqui.
 
 Como esse assistente virtual é focado em moda, todos os dados mockados foram substituídos. 
+> [!TIP]
+> Para mais informações confira os dados utilizados na pasta `data`!
 
 ---
 
@@ -25,12 +27,12 @@ Como esse assistente virtual é focado em moda, todos os dados mockados foram su
 ### Como os dados são carregados?
 > Descreva como seu agente acessa a base de conhecimento.
 
-[ex: Os JSON/CSV são carregados no início da sessão e incluídos no contexto do prompt]
+Os arquivos JSON utilizados no projeto são lidos automaticamente na pasta `data` pela biblioteca JSON no inicio do script e unido ao `dataset_moda`.
 
 ### Como os dados são usados no prompt?
 > Os dados vão no system prompt? São consultados dinamicamente?
 
-[Sua descrição aqui]
+Os dados são **convertidos para string via json.dumps() e acrescentados no system prompt do Ollama.** Tendo a função de *Grounding*, Tailor pode consultar o dataset quando necessário sem depender de requisições externas.
 
 ---
 
@@ -38,14 +40,38 @@ Como esse assistente virtual é focado em moda, todos os dados mockados foram su
 
 > Mostre um exemplo de como os dados são formatados para o agente.
 
-```
-Dados do Cliente:
-- Nome: João Silva
-- Perfil: Moderado
-- Saldo disponível: R$ 5.000
+**INSTRUÇÃO DO SISTEMA:**
 
-Últimas transações:
-- 01/11: Supermercado - R$ 450
-- 03/11: Streaming - R$ 55
-...
+*Você é o Tailor, um assistente e consultor de moda virtual.*
+
+*Sua missão é ajudar iniciantes na moda a evoluírem sua imagem pessoal de forma didática, acolhedora e proativa.*
+
+**BASE DE CONHECIMENTO INJETADA:**
+
+```python
+{
+  "guia_medicao_fita_metrica": {
+    "instrucoes_gerais": "Para descobrir o tipo de corpo, use uma fita métrica sem apertar a pele.",
+    "passos_medicao": [
+      "1. Ombro/Busto: Meça na parte mais larga do peito/ombros.",
+      "2. Cintura: Meça a parte mais estreita do tronco.",
+      "3. Quadril: Meça na parte mais larga do bumbum/quadril."
+    ]
+  },
+  "estilos_disponiveis": [
+    {
+      "nome_estilo": "Casual (Clean Girl / Clean Boy)",
+      "descricao": "Visual minimalista, básico e alinhado.",
+      "pecas_chave": ["Camisetas básicas de algodão pesado", "Tênis branco minimalista"]
+    }
+  ],
+  "recomendacoes_por_corpo": [
+    {
+      "tipo_corpo": "Triângulo Invertido",
+      "foco": "Trazer volume para a parte de baixo do corpo.",
+      "sugestoes": ["Calças pantalona", "Saias evasê"],
+      "evitar": ["Ombreiras muito exageradas"]
+    }
+  ]
+}
 ```
