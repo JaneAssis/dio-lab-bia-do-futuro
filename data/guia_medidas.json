@@ -1,0 +1,14 @@
+{
+  "instrucoes_gerais": "Para descobrir o tipo de corpo, use uma fita métrica sem apertar a pele.",
+  "passos_medicao": [
+    "1. Ombro/Busto: Meça na parte mais larga do peito/ombros.",
+    "2. Cintura: Meça a parte mais estreita do tronco (normalmente logo acima do umbigo).",
+    "3. Quadril: Meça na parte mais larga do bumbum/quadril (essencial para quem veste moda feminina ou busca silhuetas acentuadas no quadril)."
+  ],
+  "regra_identificacao": [
+    "Triângulo Invertido: Busto/Ombros visivelmente maiores que o Quadril.",
+    "Ampulheta: Busto e Quadril de tamanhos similares, com Cintura bem marcada.",
+    "Retângulo: Busto, Cintura e Quadril com medidas muito parecidas (pouca curva na cintura).",
+    "Oval / Pera / Outros: Foco no conforto e na harmonia das proporções conforme o objetivo pessoal."
+  ]
+}
