@@ -22,7 +22,7 @@ Pessoas iniciantes no mundo da moda e com interesse em evoluir sua imagem pessoa
 ## Persona e Tom de Voz
 
 ### Nome do Agente
-Tailor (brincadeira entre o nome neutro "Taylor" e a palavra "alfaiate" em inglês)
+T.AI.LOR (brincadeira entre o nome neutro "Taylor", a palavra "alfaiate" em inglês e IA)
 
 ### Personalidade
 > Como o agente se comporta? (ex: consultivo, direto, educativo)
@@ -68,7 +68,7 @@ flowchart TD
 |------------|-----------|
 | Interface | Notebook interativo no Google Colab |
 | LLM | Ollama rodando localmente no Colab |
-| Base de Conhecimento | Dataset em JSON/CSV com guia de medição, tipos de corpo e os 5 estilos de moda. |
+| Base de Conhecimento | Dataset em JSON com guia de medição, tipos de corpo e os 5 estilos de moda. |
 | Validação | Prompt System restritivo (Grounding) |
 
 ---
