@@ -6,9 +6,9 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 
 | Arquivo | Formato | Utilização no Agente |
 |---------|---------|---------------------|
-| `estilos_moda.json` | JSON | Consulta 5 estilos disponíveis na base. |
+| `estilos_moda.json` | JSON | Consulta 5 estilos disponíveis na base. Utilizado no Python para seleções de menu e injetado no Ollama. |
 | `guia_medicao.json` | JSON | Possui as instruções de como o usuário pode descobrir o tipo de corpo através das medidas. |
-| `recomendacoes_corpo.json` | JSON | Informa as peças boas/ruins de acordo com o formato corporal do usuário. |
+| `recomendacoes_corpo.json` | JSON | Informa biotipos e peças boas/ruins de acordo com o formato corporal do usuário. |
 
 ---
 
@@ -16,7 +16,7 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 
 > Você modificou ou expandiu os dados mockados? Descreva aqui.
 
-Como esse assistente virtual é focado em moda, todos os dados mockados foram substituídos. 
+Como esse assistente virtual é focado em moda, todos os dados mockados foram substituídos por datasets estruturados referentes ao assunto. 
 > [!TIP]
 > Para mais informações confira os dados utilizados na pasta `data`!
 
@@ -27,7 +27,7 @@ Como esse assistente virtual é focado em moda, todos os dados mockados foram su
 ### Como os dados são carregados?
 > Descreva como seu agente acessa a base de conhecimento.
 
-Os arquivos JSON utilizados no projeto são lidos automaticamente na pasta `data` pela biblioteca JSON no inicio do script e unido ao `dataset_moda`.
+Os arquivos JSON utilizados no projeto são lidos automaticamente na pasta `data` pela biblioteca JSON no inicio do script e unido ao `estilos_moda`.
 
 ### Como os dados são usados no prompt?
 > Os dados vão no system prompt? São consultados dinamicamente?
@@ -48,30 +48,19 @@ Os dados são **convertidos para string via json.dumps() e acrescentados no syst
 
 **BASE DE CONHECIMENTO INJETADA:**
 
-```python
-{
-  "guia_medicao_fita_metrica": {
-    "instrucoes_gerais": "Para descobrir o tipo de corpo, use uma fita métrica sem apertar a pele.",
-    "passos_medicao": [
-      "1. Ombro/Busto: Meça na parte mais larga do peito/ombros.",
-      "2. Cintura: Meça a parte mais estreita do tronco.",
-      "3. Quadril: Meça na parte mais larga do bumbum/quadril."
-    ]
-  },
-  "estilos_disponiveis": [
-    {
-      "nome_estilo": "Casual (Clean Girl / Clean Boy)",
-      "descricao": "Visual minimalista, básico e alinhado.",
-      "pecas_chave": ["Camisetas básicas de algodão pesado", "Tênis branco minimalista"]
-    }
-  ],
-  "recomendacoes_por_corpo": [
-    {
-      "tipo_corpo": "Triângulo Invertido",
-      "foco": "Trazer volume para a parte de baixo do corpo.",
-      "sugestoes": ["Calças pantalona", "Saias evasê"],
-      "evitar": ["Ombreiras muito exageradas"]
-    }
-  ]
-}
-```
+```text
+Você é EXCLUSIVAMENTE o Tailor, um consultor de moda pessoal especialista em vestuário e alfaiataria.
+
+TRAVA ABSOLUTA DE ESCOPO:
+1. SEU ÚNICO DOMÍNIO É MODA, VESTUÁRIO, ALFAIATARIA E CONSULTORIA DE ESTILO.
+2. NUNCA responda sobre outros assuntos (celebridades, piadas gerais, filmes, comida, etc.).
+3. IDIOMA: Responda EXCLUSIVAMENTE em Português do Brasil.
+
+REGRAS DE LÓGICA DE ALFAIATARIA:
+- TERMOS PROIBIDOS: NUNCA invente termos inexistentes (ex: 'sobrecroppado', 'semicropped', 'retofit').
+- Para ENCURTAR silhuetas: Recomende cores contrastantes (color blocking), paletó trespassado e barra dobrada.
+- Para ALONGAR silhuetas: Recomende looks monocromáticos e listras verticais.
+
+CONTEXTO TÉCNICO DE MODA:
+[{"tipo_corpo": "Triângulo Invertido", "foco": "Trazer volume para o quadril", "sugestoes": ["Calça reta", "Cores claras embaixo"], "evitar": ["Ombreiras exageradas"]}, ...]
+[{"nome_estilo": "Elegante", "descricao": "Sofisticado e alinhado", "pecas_chave": ["Blazer estruturado", "Mocassim"]}, ...]
