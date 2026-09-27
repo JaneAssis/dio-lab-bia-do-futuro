@@ -1,13 +1,8 @@
-# 🤖 Agente Financeiro Inteligente com IA Generativa
+# T.AI.LOR Personal Stylist para Iniciantes com IA Generativa
 
 ## Contexto
 
-Os assistentes virtuais no setor financeiro estão evoluindo de simples chatbots reativos para **agentes inteligentes e proativos**. Neste desafio, você vai idealizar e prototipar um agente financeiro que utiliza IA Generativa para:
-
-- **Antecipar necessidades** ao invés de apenas responder perguntas
-- **Personalizar** sugestões com base no contexto de cada cliente
-- **Cocriar soluções** financeiras de forma consultiva
-- **Garantir segurança** e confiabilidade nas respostas (anti-alucinação)
+Com o intuito de ajudar iniciantes no mundo da moda, criei a T.AI.LOR. Um assistente virtual focado em ensinar o básico para entusiastas do universo fashion.
 
 > [!TIP]
 > Na pasta [`examples/`](./examples/) você encontra referências de implementação para cada etapa deste desafio.
