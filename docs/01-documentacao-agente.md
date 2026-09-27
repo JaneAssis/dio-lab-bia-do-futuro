@@ -40,8 +40,8 @@ T.AI.LOR (brincadeira entre o nome neutro "Taylor", a palavra "alfaiate" em ingl
 - direto;
 
 ### Exemplos de Linguagem
-- Saudação: Como posso te ajudar hoje?
-- Confirmação: Entendi! Vou pesquisar isso para você.
+- Saudação: Olá! Sou o T.AI.LOR, seu consultor de estilo pessoal. 👔
+- Confirmação: Como posso ajudar no seu visual hoje?
 - Erro/Limitação: Desculpe, só posso ajudar com vestuário, caimentos e estilos de roupas.
 
 ---
@@ -64,10 +64,10 @@ flowchart TD
 
 | Componente | Descrição |
 |------------|-----------|
-| Interface | Notebook interativo no Google Colab |
-| LLM | Ollama rodando localmente no Colab |
+| Interface | Notebook interativo ao Gradio ChatInterface (com geração de URL pública e gerenciamento de histórico) no Google Colab. | 
+| LLM | Ollama rodando localmente no Colab configurado com parâmetros estritos e limites adaptativos de token. |
 | Base de Conhecimento | Dataset em JSON com guia de medição, tipos de corpo e os 5 estilos de moda. |
-| Validação | Prompt System restritivo (Grounding) |
+| Validação e Guardrails | Roteador Python, Classificador Hugging Face e System Prompt de Grounding. |
 
 ---
 
